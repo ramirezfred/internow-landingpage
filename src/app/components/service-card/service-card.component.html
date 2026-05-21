@@ -1,0 +1,17 @@
+<div class="service-card glass-card">
+  <div class="service-card__icon" [innerHTML]="iconSvg"></div>
+  <h4 class="service-card__title">{{ titleKey | translate }}</h4>
+  <p class="service-card__desc">{{ descriptionKey | translate }}</p>
+
+  <div class="service-card__social" *ngIf="socialLinks.length > 0">
+    <a
+      *ngFor="let link of socialLinks"
+      [href]="link.url"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="service-card__social-link"
+      [attr.aria-label]="link.platform">
+      <span [innerHTML]="link.icon"></span>
+    </a>
+  </div>
+</div>

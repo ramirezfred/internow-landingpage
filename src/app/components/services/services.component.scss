@@ -1,0 +1,45 @@
+.services {
+  background: var(--color-bg-section-alt);
+  position: relative;
+
+  &__header {
+    text-align: center;
+    margin-bottom: var(--spacing-4xl);
+  }
+
+  &__pillars {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-4xl);
+  }
+
+  &__pillar {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+  }
+
+  &__pillar-tag {
+    font-size: var(--font-size-md);
+    color: var(--color-accent);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+
+    &::after {
+      content: '';
+      flex-grow: 1;
+      height: 1px;
+      background: linear-gradient(90deg, var(--color-border), transparent);
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-xl);
+  }
+}

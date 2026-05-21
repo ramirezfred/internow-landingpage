@@ -1,0 +1,100 @@
+{
+  "NAV": {
+    "HOME": "Inicio",
+    "ABOUT": "Nosotros",
+    "SERVICES": "Servicios",
+    "CONTACT": "Contacto",
+    "LANG_TOGGLE": "EN"
+  },
+  "HERO": {
+    "TITLE_LINE1": "Consultoría Integral de",
+    "TITLE_LINE2": "Soluciones Digitales y Operativas",
+    "SUBTITLE": "Conectamos mercados globales con soluciones inteligentes. Aceleramos negocios entre Estados Unidos, China y México con tecnología, estrategia y ejecución impecable.",
+    "CTA": "Contáctanos"
+  },
+  "ABOUT": {
+    "TAG": "¿Quiénes Somos?",
+    "TITLE": "Tu aliado estratégico en la transformación digital global",
+    "PARAGRAPH1": "InterNow es una consultora 100% digital experta en aceleración de negocios y optimización operativa. Nuestro modelo elimina las fricciones técnicas y operativas que frenan el crecimiento de empresas con visión internacional.",
+    "PARAGRAPH2": "Brindamos acompañamiento estratégico de la cadena de suministro global, desde la creación de marca y regulación, hasta la importación, logística y desarrollo tecnológico a medida.",
+    "STAT1_NUMBER": "+50",
+    "STAT1_LABEL": "Proyectos Entregados",
+    "STAT2_NUMBER": "3",
+    "STAT2_LABEL": "Mercados Conectados",
+    "STAT3_NUMBER": "100%",
+    "STAT3_LABEL": "Digital"
+  },
+  "VALUE": {
+    "TAG": "Propuesta de Valor",
+    "TITLE": "Lo que nos diferencia",
+    "CARD1_TITLE": "Agilidad Digital",
+    "CARD1_DESC": "Procesos ágiles y herramientas digitales que eliminan la burocracia y aceleran cada fase de tu proyecto, desde la idea hasta la ejecución.",
+    "CARD2_TITLE": "Soluciones Llave en Mano",
+    "CARD2_DESC": "Te acompañamos de principio a fin. Desde el concepto hasta la entrega final, sin que tengas que preocuparte por los detalles operativos.",
+    "CARD3_TITLE": "Visión 360°",
+    "CARD3_DESC": "Integramos todas las áreas de tu negocio — marca, logística, tecnología y estrategia — en una sola visión coherente y rentable."
+  },
+  "SERVICES": {
+    "TAG": "Pilares de Servicio",
+    "TITLE": "Nuestras líneas de negocio",
+    "PILLAR1_TAG": "Pilar 1 — Creación de Marca",
+    "PILLAR1_TITLE": "Crea tu Mezcal",
+    "PILLAR1_DESC": "Desarrollo integral de marca para la industria del mezcal. Desde la identidad visual y el branding hasta la estrategia regulatoria y de cumplimiento normativo para el mercado nacional e internacional.",
+    "PILLAR2_TAG": "Pilar 2 — Importación y Logística",
+    "PILLAR2_TITLE": "Comercio Internacional",
+    "PILLAR2_DESC_MOTORS": "InterNow Motors: Importación de vehículos desde Estados Unidos a México con gestión completa de documentación, trámites aduanales y entrega final.",
+    "PILLAR2_DESC_CHINA": "Operaciones China DDP: Importaciones desde China con entrega Delivered Duty Paid, eliminando la complejidad aduanal para tu negocio.",
+    "PILLAR3_TAG": "Pilar 3 — Tecnología",
+    "PILLAR3_TITLE": "Soluciones Tecnológicas",
+    "PILLAR3_DESC_APPS": "Desarrollo de Apps a Medida: Aplicaciones web y móviles diseñadas específicamente para las necesidades de tu negocio, con tecnología de vanguardia.",
+    "PILLAR3_DESC_CONSULTING": "Consultoría en Digitalización: Te guiamos en el proceso de transformación digital, optimizando flujos de trabajo y automatizando procesos clave.",
+    "MOTORS_LABEL": "InterNow Motors",
+    "CHINA_LABEL": "Operaciones China DDP",
+    "APPS_LABEL": "Apps a Medida",
+    "CONSULTING_LABEL": "Consultoría Digital"
+  },
+  "CONTACT": {
+    "TAG": "Contacto",
+    "TITLE": "¿Listo para impulsar tu negocio?",
+    "SUBTITLE": "Completa el formulario y un especialista se pondrá en contacto contigo en menos de 24 horas.",
+    "NAME_LABEL": "Nombre completo",
+    "NAME_PLACEHOLDER": "Ej. Juan Pérez",
+    "EMAIL_LABEL": "Correo electrónico",
+    "EMAIL_PLACEHOLDER": "tu@correo.com",
+    "PHONE_LABEL": "Teléfono",
+    "PHONE_PLACEHOLDER": "+52 55 1234 5678",
+    "SERVICE_LABEL": "Servicio de interés",
+    "SERVICE_PLACEHOLDER": "Selecciona un servicio",
+    "SERVICE_OPT1": "Creación de Marca / Mezcal",
+    "SERVICE_OPT2": "Importación de Vehículos (Motors)",
+    "SERVICE_OPT3": "Importación desde China (DDP)",
+    "SERVICE_OPT4": "Desarrollo de Apps a Medida",
+    "SERVICE_OPT5": "Consultoría en Digitalización",
+    "SERVICE_OPT6": "Otro",
+    "MESSAGE_LABEL": "Mensaje",
+    "MESSAGE_PLACEHOLDER": "Cuéntanos sobre tu proyecto o necesidad...",
+    "SUBMIT": "Enviar mensaje",
+    "SENDING": "Enviando...",
+    "SUCCESS": "¡Mensaje enviado con éxito! Te contactaremos pronto.",
+    "ERROR_SEND": "Hubo un error al enviar. Intenta de nuevo.",
+    "ERROR_REQUIRED": "Este campo es obligatorio",
+    "ERROR_EMAIL": "Ingresa un correo válido",
+    "ERROR_PHONE": "Ingresa un teléfono válido",
+    "ERROR_MINLENGTH_NAME": "Mínimo 2 caracteres",
+    "ERROR_MINLENGTH_MSG": "Mínimo 10 caracteres"
+  },
+  "FOOTER": {
+    "DESCRIPTION": "Consultoría integral de soluciones digitales y operativas. Conectando mercados globales con tecnología e innovación.",
+    "NAV_TITLE": "Navegación",
+    "SOCIAL_TITLE": "Redes Sociales",
+    "CONTACT_TITLE": "Contacto",
+    "EMAIL": "contacto@internow.com",
+    "PHONE": "+52 55 0000 0000",
+    "RIGHTS": "Todos los derechos reservados."
+  },
+  "SEO": {
+    "TITLE": "InterNow — Consultoría Integral de Soluciones Digitales y Operativas",
+    "DESCRIPTION": "InterNow Business Consulting: aceleramos negocios conectando mercados en USA, China y México. Creación de marca, importación, logística y desarrollo tecnológico.",
+    "KEYWORDS": "consultoría digital, importación vehículos, mezcal, desarrollo apps, logística internacional, China DDP, InterNow"
+  }
+}

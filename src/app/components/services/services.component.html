@@ -1,0 +1,60 @@
+<section class="services section" id="services" #servicesSection>
+  <div class="container">
+    <div class="services__header">
+      <span class="section-tag reveal">{{ 'SERVICES.TAG' | translate }}</span>
+      <h2 class="section-title reveal">{{ 'SERVICES.TITLE' | translate }}</h2>
+    </div>
+
+    <div class="services__pillars">
+      <!-- Pillar 1: Brand -->
+      <div class="services__pillar reveal">
+        <h3 class="services__pillar-tag">{{ 'SERVICES.PILLAR1_TAG' | translate }}</h3>
+        <div class="services__grid">
+          <app-service-card
+            [iconSvg]="mezcalIcon"
+            titleKey="SERVICES.PILLAR1_TITLE"
+            descriptionKey="SERVICES.PILLAR1_DESC"
+            [socialLinks]="mezcalLinks">
+          </app-service-card>
+        </div>
+      </div>
+
+      <!-- Pillar 2: Logistics -->
+      <div class="services__pillar reveal">
+        <h3 class="services__pillar-tag">{{ 'SERVICES.PILLAR2_TAG' | translate }}</h3>
+        <div class="services__grid">
+          <app-service-card
+            [iconSvg]="motorsIcon"
+            titleKey="SERVICES.MOTORS_LABEL"
+            descriptionKey="SERVICES.PILLAR2_DESC_MOTORS"
+            [socialLinks]="motorsLinks">
+          </app-service-card>
+          
+          <app-service-card
+            [iconSvg]="chinaIcon"
+            titleKey="SERVICES.CHINA_LABEL"
+            descriptionKey="SERVICES.PILLAR2_DESC_CHINA">
+          </app-service-card>
+        </div>
+      </div>
+
+      <!-- Pillar 3: Technology -->
+      <div class="services__pillar reveal">
+        <h3 class="services__pillar-tag">{{ 'SERVICES.PILLAR3_TAG' | translate }}</h3>
+        <div class="services__grid">
+          <app-service-card
+            [iconSvg]="appsIcon"
+            titleKey="SERVICES.APPS_LABEL"
+            descriptionKey="SERVICES.PILLAR3_DESC_APPS">
+          </app-service-card>
+          
+          <app-service-card
+            [iconSvg]="consultingIcon"
+            titleKey="SERVICES.CONSULTING_LABEL"
+            descriptionKey="SERVICES.PILLAR3_DESC_CONSULTING">
+          </app-service-card>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

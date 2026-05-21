@@ -1,0 +1,100 @@
+{
+  "NAV": {
+    "HOME": "Home",
+    "ABOUT": "About",
+    "SERVICES": "Services",
+    "CONTACT": "Contact",
+    "LANG_TOGGLE": "ES"
+  },
+  "HERO": {
+    "TITLE_LINE1": "Comprehensive Digital &",
+    "TITLE_LINE2": "Operational Solutions Consulting",
+    "SUBTITLE": "We connect global markets with smart solutions. We accelerate businesses between the United States, China, and Mexico with technology, strategy, and flawless execution.",
+    "CTA": "Contact Us"
+  },
+  "ABOUT": {
+    "TAG": "About Us",
+    "TITLE": "Your strategic partner in global digital transformation",
+    "PARAGRAPH1": "InterNow is a 100% digital consulting firm specialized in business acceleration and operational optimization. Our model eliminates the technical and operational friction that slows the growth of internationally-minded companies.",
+    "PARAGRAPH2": "We provide strategic support across the global supply chain — from brand creation and regulatory compliance to import logistics and custom technology development.",
+    "STAT1_NUMBER": "+50",
+    "STAT1_LABEL": "Projects Delivered",
+    "STAT2_NUMBER": "3",
+    "STAT2_LABEL": "Connected Markets",
+    "STAT3_NUMBER": "100%",
+    "STAT3_LABEL": "Digital"
+  },
+  "VALUE": {
+    "TAG": "Value Proposition",
+    "TITLE": "What sets us apart",
+    "CARD1_TITLE": "Digital Agility",
+    "CARD1_DESC": "Agile processes and digital tools that cut through bureaucracy and accelerate every phase of your project, from ideation to execution.",
+    "CARD2_TITLE": "Turnkey Solutions",
+    "CARD2_DESC": "We walk with you from start to finish. From concept to final delivery, without worrying about the operational details.",
+    "CARD3_TITLE": "360° Vision",
+    "CARD3_DESC": "We integrate every area of your business — branding, logistics, technology, and strategy — into a single coherent and profitable vision."
+  },
+  "SERVICES": {
+    "TAG": "Service Pillars",
+    "TITLE": "Our business lines",
+    "PILLAR1_TAG": "Pillar 1 — Brand Development",
+    "PILLAR1_TITLE": "Crea tu Mezcal",
+    "PILLAR1_DESC": "Comprehensive brand development for the mezcal industry. From visual identity and branding to regulatory strategy and compliance for both domestic and international markets.",
+    "PILLAR2_TAG": "Pillar 2 — Import & Logistics",
+    "PILLAR2_TITLE": "International Trade",
+    "PILLAR2_DESC_MOTORS": "InterNow Motors: Vehicle imports from the United States to Mexico with complete documentation management, customs procedures, and final delivery.",
+    "PILLAR2_DESC_CHINA": "China DDP Operations: Imports from China with Delivered Duty Paid, eliminating customs complexity for your business.",
+    "PILLAR3_TAG": "Pillar 3 — Technology",
+    "PILLAR3_TITLE": "Tech Solutions",
+    "PILLAR3_DESC_APPS": "Custom App Development: Web and mobile applications specifically designed for your business needs, built with cutting-edge technology.",
+    "PILLAR3_DESC_CONSULTING": "Digitalization Consulting: We guide you through the digital transformation process, optimizing workflows and automating key processes.",
+    "MOTORS_LABEL": "InterNow Motors",
+    "CHINA_LABEL": "China DDP Operations",
+    "APPS_LABEL": "Custom Apps",
+    "CONSULTING_LABEL": "Digital Consulting"
+  },
+  "CONTACT": {
+    "TAG": "Contact",
+    "TITLE": "Ready to boost your business?",
+    "SUBTITLE": "Fill out the form and a specialist will contact you within 24 hours.",
+    "NAME_LABEL": "Full name",
+    "NAME_PLACEHOLDER": "e.g. John Smith",
+    "EMAIL_LABEL": "Email address",
+    "EMAIL_PLACEHOLDER": "you@email.com",
+    "PHONE_LABEL": "Phone",
+    "PHONE_PLACEHOLDER": "+1 555 123 4567",
+    "SERVICE_LABEL": "Service of interest",
+    "SERVICE_PLACEHOLDER": "Select a service",
+    "SERVICE_OPT1": "Brand Development / Mezcal",
+    "SERVICE_OPT2": "Vehicle Imports (Motors)",
+    "SERVICE_OPT3": "China Imports (DDP)",
+    "SERVICE_OPT4": "Custom App Development",
+    "SERVICE_OPT5": "Digitalization Consulting",
+    "SERVICE_OPT6": "Other",
+    "MESSAGE_LABEL": "Message",
+    "MESSAGE_PLACEHOLDER": "Tell us about your project or needs...",
+    "SUBMIT": "Send message",
+    "SENDING": "Sending...",
+    "SUCCESS": "Message sent successfully! We'll contact you soon.",
+    "ERROR_SEND": "There was an error sending your message. Please try again.",
+    "ERROR_REQUIRED": "This field is required",
+    "ERROR_EMAIL": "Enter a valid email address",
+    "ERROR_PHONE": "Enter a valid phone number",
+    "ERROR_MINLENGTH_NAME": "Minimum 2 characters",
+    "ERROR_MINLENGTH_MSG": "Minimum 10 characters"
+  },
+  "FOOTER": {
+    "DESCRIPTION": "Comprehensive digital and operational solutions consulting. Connecting global markets with technology and innovation.",
+    "NAV_TITLE": "Navigation",
+    "SOCIAL_TITLE": "Social Media",
+    "CONTACT_TITLE": "Contact",
+    "EMAIL": "contact@internow.com",
+    "PHONE": "+52 55 0000 0000",
+    "RIGHTS": "All rights reserved."
+  },
+  "SEO": {
+    "TITLE": "InterNow — Comprehensive Digital & Operational Solutions Consulting",
+    "DESCRIPTION": "InterNow Business Consulting: accelerating businesses connecting markets in the USA, China, and Mexico. Brand development, imports, logistics, and tech development.",
+    "KEYWORDS": "digital consulting, vehicle imports, mezcal, app development, international logistics, China DDP, InterNow"
+  }
+}

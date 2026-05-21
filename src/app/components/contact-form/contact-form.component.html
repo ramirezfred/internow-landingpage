@@ -1,0 +1,119 @@
+<section class="contact section" id="contact">
+  <div class="container">
+    <div class="contact__grid">
+      <!-- Left: Content -->
+      <div class="contact__content reveal">
+        <span class="section-tag">{{ 'CONTACT.TAG' | translate }}</span>
+        <h2 class="section-title">{{ 'CONTACT.TITLE' | translate }}</h2>
+        <p class="contact__subtitle">{{ 'CONTACT.SUBTITLE' | translate }}</p>
+        
+        <div class="contact__visual">
+          <!-- Decorative element or illustration could go here -->
+          <div class="contact__glow"></div>
+        </div>
+      </div>
+
+      <!-- Right: Form -->
+      <div class="contact__form-wrapper glass-card reveal">
+        <form [formGroup]="contactForm" (ngSubmit)="sendContactForm()" class="contact__form">
+          
+          <!-- Name -->
+          <div class="form-group">
+            <label for="name">{{ 'CONTACT.NAME_LABEL' | translate }}</label>
+            <input 
+              type="text" 
+              id="name" 
+              formControlName="name" 
+              [placeholder]="'CONTACT.NAME_PLACEHOLDER' | translate"
+              [class.is-invalid]="isFieldInvalid('name')">
+            <div class="error-message" *ngIf="isFieldInvalid('name')">
+              <span *ngIf="contactForm.get('name')?.hasError('required')">{{ 'CONTACT.ERROR_REQUIRED' | translate }}</span>
+              <span *ngIf="contactForm.get('name')?.hasError('minlength')">{{ 'CONTACT.ERROR_MINLENGTH_NAME' | translate }}</span>
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="form-group">
+            <label for="email">{{ 'CONTACT.EMAIL_LABEL' | translate }}</label>
+            <input 
+              type="email" 
+              id="email" 
+              formControlName="email" 
+              [placeholder]="'CONTACT.EMAIL_PLACEHOLDER' | translate"
+              [class.is-invalid]="isFieldInvalid('email')">
+            <div class="error-message" *ngIf="isFieldInvalid('email')">
+              <span *ngIf="contactForm.get('email')?.hasError('required')">{{ 'CONTACT.ERROR_REQUIRED' | translate }}</span>
+              <span *ngIf="contactForm.get('email')?.hasError('email')">{{ 'CONTACT.ERROR_EMAIL' | translate }}</span>
+            </div>
+          </div>
+
+          <!-- Phone -->
+          <div class="form-group">
+            <label for="phone">{{ 'CONTACT.PHONE_LABEL' | translate }}</label>
+            <input 
+              type="tel" 
+              id="phone" 
+              formControlName="phone" 
+              [placeholder]="'CONTACT.PHONE_PLACEHOLDER' | translate"
+              [class.is-invalid]="isFieldInvalid('phone')">
+            <div class="error-message" *ngIf="isFieldInvalid('phone')">
+              <span *ngIf="contactForm.get('phone')?.hasError('required')">{{ 'CONTACT.ERROR_REQUIRED' | translate }}</span>
+              <span *ngIf="contactForm.get('phone')?.hasError('pattern')">{{ 'CONTACT.ERROR_PHONE' | translate }}</span>
+            </div>
+          </div>
+
+          <!-- Service -->
+          <div class="form-group">
+            <label for="service">{{ 'CONTACT.SERVICE_LABEL' | translate }}</label>
+            <select 
+              id="service" 
+              formControlName="service"
+              [class.is-invalid]="isFieldInvalid('service')">
+              <option value="" disabled selected>{{ 'CONTACT.SERVICE_PLACEHOLDER' | translate }}</option>
+              <option value="brand">{{ 'CONTACT.SERVICE_OPT1' | translate }}</option>
+              <option value="motors">{{ 'CONTACT.SERVICE_OPT2' | translate }}</option>
+              <option value="china">{{ 'CONTACT.SERVICE_OPT3' | translate }}</option>
+              <option value="apps">{{ 'CONTACT.SERVICE_OPT4' | translate }}</option>
+              <option value="consulting">{{ 'CONTACT.SERVICE_OPT5' | translate }}</option>
+              <option value="other">{{ 'CONTACT.SERVICE_OPT6' | translate }}</option>
+            </select>
+            <div class="error-message" *ngIf="isFieldInvalid('service')">
+              <span *ngIf="contactForm.get('service')?.hasError('required')">{{ 'CONTACT.ERROR_REQUIRED' | translate }}</span>
+            </div>
+          </div>
+
+          <!-- Message -->
+          <div class="form-group form-group--full">
+            <label for="message">{{ 'CONTACT.MESSAGE_LABEL' | translate }}</label>
+            <textarea 
+              id="message" 
+              formControlName="message" 
+              rows="4" 
+              [placeholder]="'CONTACT.MESSAGE_PLACEHOLDER' | translate"
+              [class.is-invalid]="isFieldInvalid('message')"></textarea>
+            <div class="error-message" *ngIf="isFieldInvalid('message')">
+              <span *ngIf="contactForm.get('message')?.hasError('required')">{{ 'CONTACT.ERROR_REQUIRED' | translate }}</span>
+              <span *ngIf="contactForm.get('message')?.hasError('minlength')">{{ 'CONTACT.ERROR_MINLENGTH_MSG' | translate }}</span>
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="form-group form-group--full form-actions">
+            <button 
+              type="submit" 
+              class="btn-primary" 
+              [disabled]="status() === 'loading'">
+              <span *ngIf="status() === 'idle' || status() === 'error'">{{ 'CONTACT.SUBMIT' | translate }}</span>
+              <span *ngIf="status() === 'loading'">{{ 'CONTACT.SENDING' | translate }}</span>
+              <span *ngIf="status() === 'success'">{{ 'CONTACT.SUCCESS' | translate }}</span>
+            </button>
+            
+            <div class="status-message error" *ngIf="status() === 'error'">
+              {{ 'CONTACT.ERROR_SEND' | translate }}
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

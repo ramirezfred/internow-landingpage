@@ -1,0 +1,58 @@
+<nav class="navbar" [class.scrolled]="isScrolled()" id="navbar">
+  <div class="navbar__container container">
+    <!-- Logo -->
+    <a class="navbar__logo" (click)="scrollToSection('hero')">
+      <img src="assets/images/logo.png" alt="InterNow Business Consulting" />
+    </a>
+
+    <!-- Desktop Navigation -->
+    <ul class="navbar__links">
+      <li><a (click)="scrollToSection('hero')">{{ 'NAV.HOME' | translate }}</a></li>
+      <li><a (click)="scrollToSection('about')">{{ 'NAV.ABOUT' | translate }}</a></li>
+      <li><a (click)="scrollToSection('services')">{{ 'NAV.SERVICES' | translate }}</a></li>
+      <li><a (click)="scrollToSection('contact')">{{ 'NAV.CONTACT' | translate }}</a></li>
+    </ul>
+
+    <!-- Language Toggle + Mobile Hamburger -->
+    <div class="navbar__actions">
+      <button
+        class="navbar__lang-toggle"
+        id="lang-toggle-btn"
+        (click)="toggleLanguage()"
+        [attr.aria-label]="'Toggle language'">
+        <span class="navbar__lang-icon">🌐</span>
+        <span>{{ 'NAV.LANG_TOGGLE' | translate }}</span>
+      </button>
+
+      <button
+        class="navbar__hamburger"
+        id="mobile-menu-btn"
+        [class.active]="isMobileMenuOpen()"
+        (click)="toggleMobileMenu()"
+        aria-label="Toggle mobile menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="navbar__mobile-overlay" [class.open]="isMobileMenuOpen()" (click)="closeMobileMenu()"></div>
+
+  <!-- Mobile Menu Panel -->
+  <div class="navbar__mobile-menu" [class.open]="isMobileMenuOpen()">
+    <ul class="navbar__mobile-links">
+      <li><a (click)="scrollToSection('hero')">{{ 'NAV.HOME' | translate }}</a></li>
+      <li><a (click)="scrollToSection('about')">{{ 'NAV.ABOUT' | translate }}</a></li>
+      <li><a (click)="scrollToSection('services')">{{ 'NAV.SERVICES' | translate }}</a></li>
+      <li><a (click)="scrollToSection('contact')">{{ 'NAV.CONTACT' | translate }}</a></li>
+    </ul>
+    <button
+      class="navbar__lang-toggle navbar__lang-toggle--mobile"
+      (click)="toggleLanguage()">
+      <span class="navbar__lang-icon">🌐</span>
+      <span>{{ 'NAV.LANG_TOGGLE' | translate }}</span>
+    </button>
+  </div>
+</nav>

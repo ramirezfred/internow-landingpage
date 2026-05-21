@@ -1,0 +1,36 @@
+<section class="hero" id="hero">
+  <!-- Animated background elements -->
+  <div class="hero__bg">
+    <div class="hero__grid"></div>
+    <div class="hero__orb hero__orb--1"></div>
+    <div class="hero__orb hero__orb--2"></div>
+    <div class="hero__orb hero__orb--3"></div>
+    <div class="hero__lines">
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+  </div>
+
+  <div class="hero__content container">
+    <h1 class="hero__title">
+      <span class="hero__title-line1">{{ 'HERO.TITLE_LINE1' | translate }}</span>
+      <span class="hero__title-line2 gradient-text">{{ 'HERO.TITLE_LINE2' | translate }}</span>
+    </h1>
+
+    <p class="hero__subtitle">{{ 'HERO.SUBTITLE' | translate }}</p>
+
+    <button class="btn-primary hero__cta" id="hero-cta-btn" (click)="scrollToContact()">
+      <span>{{ 'HERO.CTA' | translate }}</span>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="5" y1="12" x2="19" y2="12"></line>
+        <polyline points="12 5 19 12 12 19"></polyline>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="hero__scroll-indicator">
+    <div class="hero__scroll-mouse">
+      <div class="hero__scroll-wheel"></div>
+    </div>
+  </div>
+</section>
