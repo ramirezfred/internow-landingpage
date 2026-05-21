@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy, signal } from '@angular/core';
+import { Component, ChangeDetectionStrategy, signal, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
@@ -13,7 +13,7 @@ type FormStatus = 'idle' | 'loading' | 'success' | 'error';
   styleUrl: './contact-form.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ContactFormComponent {
+export class ContactFormComponent implements AfterViewInit {
   contactForm: FormGroup;
   status = signal<FormStatus>('idle');
 
@@ -27,9 +27,33 @@ export class ContactFormComponent {
     });
   }
 
+  @ViewChild('contactSection', { static: true }) contactSection!: ElementRef<HTMLElement>;
+
   isFieldInvalid(fieldName: string): boolean {
     const field = this.contactForm.get(fieldName);
     return !!(field && field.invalid && (field.dirty || field.touched));
+  }
+
+  ngAfterViewInit(): void {
+    this.initScrollReveal();
+  }
+
+  private initScrollReveal(): void {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (this.contactSection?.nativeElement) {
+      const revealElements = this.contactSection.nativeElement.querySelectorAll('.reveal');
+      revealElements.forEach((element) => observer.observe(element));
+    }
   }
 
   sendContactForm(): void {
