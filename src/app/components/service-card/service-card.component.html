@@ -1,5 +1,5 @@
 <div class="service-card glass-card">
-  <div class="service-card__icon" [innerHTML]="iconSvg"></div>
+  <div class="service-card__icon" [innerHTML]="safeIconSvg"></div>
   <h4 class="service-card__title">{{ titleKey | translate }}</h4>
   <p class="service-card__desc">{{ descriptionKey | translate }}</p>
 
@@ -11,7 +11,7 @@
       rel="noopener noreferrer"
       class="service-card__social-link"
       [attr.aria-label]="link.platform">
-      <span [innerHTML]="link.icon"></span>
+      <span [innerHTML]="link.safeIcon"></span>
     </a>
   </div>
 </div>

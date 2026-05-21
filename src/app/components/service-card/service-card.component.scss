@@ -17,7 +17,7 @@
     flex-shrink: 0;
     transition: all var(--transition-base);
 
-    svg {
+    ::ng-deep svg {
       width: 28px;
       height: 28px;
     }
@@ -65,7 +65,13 @@
     color: var(--color-text-muted);
     transition: all var(--transition-fast);
 
-    svg {
+    ::ng-deep span {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    ::ng-deep svg {
       width: 18px;
       height: 18px;
     }
