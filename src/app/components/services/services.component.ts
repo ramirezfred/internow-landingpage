@@ -15,19 +15,19 @@ export class ServicesComponent implements AfterViewInit {
   @ViewChild('servicesSection', { static: true }) servicesSection!: ElementRef<HTMLElement>;
 
   // Icon for Mezcal (Brand)
-  readonly mezcalIcon = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>`;
+  readonly mezcalIcon = `<div style="font-size: 3rem; text-shadow: 0 0 20px rgba(0,212,255,0.5);">🥃</div>`;
   
   // Icon for Motors (Import)
-  readonly motorsIcon = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="8" rx="2" ry="2"/><path d="M21 11L18 6H6L3 11"/><circle cx="7" cy="19" r="2"/><circle cx="17" cy="19" r="2"/></svg>`;
+  readonly motorsIcon = `<div style="font-size: 3rem; text-shadow: 0 0 20px rgba(0,212,255,0.5);">🚘</div>`;
   
   // Icon for China DDP (Logistics)
-  readonly chinaIcon = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>`;
+  readonly chinaIcon = `<div style="font-size: 3rem; text-shadow: 0 0 20px rgba(0,212,255,0.5);">🚢</div>`;
   
   // Icon for Apps (Tech)
-  readonly appsIcon = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>`;
+  readonly appsIcon = `<div style="font-size: 3rem; text-shadow: 0 0 20px rgba(0,212,255,0.5);">📱</div>`;
   
   // Icon for Consulting (Tech)
-  readonly consultingIcon = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>`;
+  readonly consultingIcon = `<div style="font-size: 3rem; text-shadow: 0 0 20px rgba(0,212,255,0.5);">🤝</div>`;
 
   // Social Links
   readonly fbIcon = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>`;
