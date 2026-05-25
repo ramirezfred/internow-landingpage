@@ -30,6 +30,7 @@
       height: 90px;
       width: auto;
       transition: transform var(--transition-fast);
+      filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.6)) drop-shadow(0 0 2px rgba(255, 255, 255, 0.8));
     }
 
     &:hover img {

@@ -36,6 +36,7 @@
     img {
       height: 68px;
       width: auto;
+      filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.6)) drop-shadow(0 0 2px rgba(255, 255, 255, 0.8));
     }
   }
 
