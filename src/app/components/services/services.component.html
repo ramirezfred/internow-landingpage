@@ -10,11 +10,18 @@
       <div class="services__pillar reveal">
         <h3 class="services__pillar-tag">{{ 'SERVICES.PILLAR1_TAG' | translate }}</h3>
         <div class="services__grid">
-          <app-service-card
-            [iconSvg]="mezcalIcon"
-            titleKey="SERVICES.PILLAR1_TITLE"
-            descriptionKey="SERVICES.PILLAR1_DESC"
-            [socialLinks]="mezcalLinks">
+          <!-- REEMPLAZAR LOTTIE SRC CON TU ANIMACIÓN PARA MEZCAL -->
+          <app-service-card titleKey="SERVICES.PILLAR1_TITLE" descriptionKey="SERVICES.PILLAR1_DESC"
+            moreKey="SERVICES.PILLAR1_MORE" [socialLinks]="mezcalLinks">
+            <dotlottie-wc src="https://lottie.host/2d01cc6f-7c3c-4786-8df5-32136ffe3f75/8PtFdCZYt8.lottie" autoplay
+              loop></dotlottie-wc>
+          </app-service-card>
+
+          <!-- REEMPLAZAR LOTTIE SRC CON TU ANIMACIÓN PARA TEQUILA -->
+          <app-service-card titleKey="SERVICES.PILLAR1_TEQUILA_TITLE" descriptionKey="SERVICES.PILLAR1_TEQUILA_DESC"
+            moreKey="SERVICES.PILLAR1_TEQUILA_MORE" [socialLinks]="tequilaLinks">
+            <dotlottie-wc src="https://lottie.host/11d71a21-b5c5-4507-8319-844fc7337b6e/lfqVQL3bZ7.lottie" autoplay
+              loop></dotlottie-wc>
           </app-service-card>
         </div>
       </div>
@@ -23,17 +30,18 @@
       <div class="services__pillar reveal">
         <h3 class="services__pillar-tag">{{ 'SERVICES.PILLAR2_TAG' | translate }}</h3>
         <div class="services__grid">
-          <app-service-card
-            [iconSvg]="motorsIcon"
-            titleKey="SERVICES.MOTORS_LABEL"
-            descriptionKey="SERVICES.PILLAR2_DESC_MOTORS"
-            [socialLinks]="motorsLinks">
+          <!-- REEMPLAZAR LOTTIE SRC CON TU ANIMACIÓN PARA MOTORS -->
+          <app-service-card titleKey="SERVICES.MOTORS_LABEL" descriptionKey="SERVICES.PILLAR2_DESC_MOTORS"
+            moreKey="SERVICES.PILLAR2_MORE_MOTORS" [socialLinks]="motorsLinks">
+            <dotlottie-wc src="https://lottie.host/21c70bc2-e3dd-4171-a98a-3267ed9f0afc/k5VYgIEpfu.lottie" autoplay
+              loop></dotlottie-wc>
           </app-service-card>
-          
-          <app-service-card
-            [iconSvg]="chinaIcon"
-            titleKey="SERVICES.CHINA_LABEL"
-            descriptionKey="SERVICES.PILLAR2_DESC_CHINA">
+
+          <!-- REEMPLAZAR LOTTIE SRC CON TU ANIMACIÓN PARA CHINA -->
+          <app-service-card titleKey="SERVICES.CHINA_LABEL" descriptionKey="SERVICES.PILLAR2_DESC_CHINA"
+            moreKey="SERVICES.PILLAR2_MORE_CHINA">
+            <dotlottie-wc src="https://lottie.host/0978fb0d-d19a-4ee6-b7e9-3cedb3658ecc/hFpUI8ExQy.lottie" autoplay
+              loop></dotlottie-wc>
           </app-service-card>
         </div>
       </div>
@@ -42,16 +50,18 @@
       <div class="services__pillar reveal">
         <h3 class="services__pillar-tag">{{ 'SERVICES.PILLAR3_TAG' | translate }}</h3>
         <div class="services__grid">
-          <app-service-card
-            [iconSvg]="appsIcon"
-            titleKey="SERVICES.APPS_LABEL"
-            descriptionKey="SERVICES.PILLAR3_DESC_APPS">
+          <!-- REEMPLAZAR LOTTIE SRC CON TU ANIMACIÓN PARA APPS -->
+          <app-service-card titleKey="SERVICES.APPS_LABEL" descriptionKey="SERVICES.PILLAR3_DESC_APPS"
+            moreKey="SERVICES.PILLAR3_MORE_APPS">
+            <dotlottie-wc src="https://lottie.host/7c8d7639-48d7-4a92-b74a-38f44bb0a90a/ZJc2BXzhMV.lottie" autoplay
+              loop></dotlottie-wc>
           </app-service-card>
-          
-          <app-service-card
-            [iconSvg]="consultingIcon"
-            titleKey="SERVICES.CONSULTING_LABEL"
-            descriptionKey="SERVICES.PILLAR3_DESC_CONSULTING">
+
+          <!-- REEMPLAZAR LOTTIE SRC CON TU ANIMACIÓN PARA CONSULTING -->
+          <app-service-card titleKey="SERVICES.CONSULTING_LABEL" descriptionKey="SERVICES.PILLAR3_DESC_CONSULTING"
+            moreKey="SERVICES.PILLAR3_MORE_CONSULTING">
+            <dotlottie-wc src="https://lottie.host/58f41110-5868-4498-95e9-a451336e3b7e/WozAwtbhdn.lottie" autoplay
+              loop></dotlottie-wc>
           </app-service-card>
         </div>
       </div>

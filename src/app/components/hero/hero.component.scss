@@ -6,6 +6,8 @@
   justify-content: center;
   overflow: hidden;
   padding-top: var(--navbar-height);
+  background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 40%, #314C8F 100%);
+  color: var(--color-text-on-dark);
 
   /* --- Background Effects --- */
   &__bg {
@@ -112,10 +114,6 @@
     width: 100%;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-areas:
-      "text"
-      "animation"
-      "cta";
     gap: var(--spacing-xl);
     text-align: center;
     align-items: center;
@@ -123,21 +121,29 @@
 
     @media (min-width: 992px) {
       grid-template-columns: 1fr 1fr;
-      grid-template-areas:
-        "text animation"
-        "text cta";
       text-align: left;
       justify-items: start;
-      gap: var(--spacing-xl);
-      row-gap: var(--spacing-lg);
     }
   }
 
-  &__text-column {
-    grid-area: text;
+  &__left-column {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    opacity: 0;
+    animation: slideInLeft 3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation-delay: 0.3s;
+  }
+
+  &__right-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    opacity: 0;
+    animation: slideInRight 3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation-delay: 0.7s;
   }
 
   &__title {
@@ -149,7 +155,7 @@
   &__title-line1 {
     font-size: var(--font-size-2xl);
     font-weight: 400;
-    color: var(--color-text-secondary);
+    color: var(--color-text-on-dark-secondary);
     letter-spacing: 1px;
   }
 
@@ -162,7 +168,7 @@
 
   &__subtitle {
     font-size: var(--font-size-md);
-    color: var(--color-text-secondary);
+    color: var(--color-text-on-dark-secondary);
     max-width: 650px;
     margin-inline: auto;
     margin-top: var(--spacing-lg);
@@ -174,7 +180,6 @@
   }
 
   &__animation {
-    grid-area: animation;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -197,11 +202,10 @@
   }
 
   &__cta-wrapper {
-    grid-area: cta;
     display: flex;
     justify-content: center;
     width: 100%;
-    margin-top: calc(-2 * var(--spacing-lg));
+    margin-top: calc(-1 * var(--spacing-xl)); /* Pull closer to animation */
   }
 
   &__cta {
@@ -230,7 +234,7 @@
   &__scroll-mouse {
     width: 26px;
     height: 40px;
-    border: 2px solid var(--color-text-muted);
+    border: 2px solid rgba(255, 255, 255, 0.4);
     border-radius: 14px;
     display: flex;
     justify-content: center;
@@ -298,6 +302,28 @@
   100% {
     opacity: 0;
     transform: translateY(10px);
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 

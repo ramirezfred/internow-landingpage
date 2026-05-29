@@ -1,7 +1,30 @@
 <div class="service-card glass-card">
-  <div class="service-card__icon" [innerHTML]="safeIconSvg"></div>
+  <div class="service-card__media">
+    <ng-content select="dotlottie-wc"></ng-content>
+    <div class="service-card__icon" *ngIf="iconSvg" [innerHTML]="safeIconSvg"></div>
+  </div>
+
   <h4 class="service-card__title">{{ titleKey | translate }}</h4>
   <p class="service-card__desc">{{ descriptionKey | translate }}</p>
+
+  <div class="service-card__more-wrapper" *ngIf="moreKey">
+    <div class="service-card__more-content" [class.service-card__more-content--expanded]="isExpanded">
+      <p class="service-card__more-text">{{ moreKey | translate }}</p>
+    </div>
+    <button
+      type="button"
+      class="service-card__toggle"
+      [class.service-card__toggle--expanded]="isExpanded"
+      (click)="toggleExpanded()"
+      [attr.aria-label]="isExpanded ? ('SERVICES.SEE_LESS' | translate) : ('SERVICES.SEE_MORE' | translate)">
+      <span class="service-card__toggle-label">
+        {{ isExpanded ? ('SERVICES.SEE_LESS' | translate) : ('SERVICES.SEE_MORE' | translate) }}
+      </span>
+      <svg class="service-card__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+    </button>
+  </div>
 
   <div class="service-card__social" *ngIf="socialLinks.length > 0">
     <a

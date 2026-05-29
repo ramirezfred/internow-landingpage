@@ -1,7 +1,8 @@
-import { Component, ChangeDetectionStrategy, signal, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
+import { Component, ChangeDetectionStrategy, signal, AfterViewInit, ElementRef, ViewChild, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
+import { ContactService } from '../../services/contact.service';
 
 type FormStatus = 'idle' | 'loading' | 'success' | 'error';
 
@@ -16,6 +17,7 @@ type FormStatus = 'idle' | 'loading' | 'success' | 'error';
 export class ContactFormComponent implements AfterViewInit {
   contactForm: FormGroup;
   status = signal<FormStatus>('idle');
+  private readonly contactService = inject(ContactService);
 
   constructor(private fb: FormBuilder) {
     this.contactForm = this.fb.group({
@@ -66,16 +68,17 @@ export class ContactFormComponent implements AfterViewInit {
     // 2. Happy path
     this.status.set('loading');
     
-    // Simulate API call
-    setTimeout(() => {
-      // Mock success for now, in the future integrate EmailJS/Formspree/Firebase here
+    try {
+      this.contactService.sendToWhatsApp(this.contactForm.value);
       this.status.set('success');
       this.contactForm.reset();
-      
-      // Reset status after a few seconds
-      setTimeout(() => {
-        this.status.set('idle');
-      }, 5000);
-    }, 1500);
+    } catch (e) {
+      this.status.set('error');
+    }
+    
+    // Reset status after a few seconds
+    setTimeout(() => {
+      this.status.set('idle');
+    }, 5000);
   }
 }

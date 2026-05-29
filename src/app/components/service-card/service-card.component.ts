@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy, Input, OnChanges, SimpleChanges, OnInit, inject } from '@angular/core';
+import { Component, ChangeDetectionStrategy, Input, OnChanges, SimpleChanges, OnInit, inject, CUSTOM_ELEMENTS_SCHEMA, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
@@ -17,15 +17,20 @@ export interface SocialLink {
   templateUrl: './service-card.component.html',
   styleUrl: './service-card.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class ServiceCardComponent implements OnChanges, OnInit {
-  @Input({ required: true }) iconSvg!: string;
+  @Input() iconSvg?: string;
   @Input({ required: true }) titleKey!: string;
   @Input({ required: true }) descriptionKey!: string;
+  @Input() moreKey?: string;
   @Input() socialLinks: SocialLink[] = [];
 
   safeIconSvg!: SafeHtml;
+  isExpanded = false;
+
   private readonly sanitizer = inject(DomSanitizer);
+  private readonly changeDetectorRef = inject(ChangeDetectorRef);
 
   ngOnInit(): void {
     this.updateIcons();
@@ -33,6 +38,11 @@ export class ServiceCardComponent implements OnChanges, OnInit {
 
   ngOnChanges(changes: SimpleChanges): void {
     this.updateIcons();
+  }
+
+  toggleExpanded(): void {
+    this.isExpanded = !this.isExpanded;
+    this.changeDetectorRef.markForCheck();
   }
 
   private updateIcons(): void {

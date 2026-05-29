@@ -52,6 +52,7 @@
     border: 1px solid var(--color-border);
     color: var(--color-accent);
     transition: all var(--transition-base);
+    opacity: 0; /* Hidden by default until animated */
 
     span {
       font-size: var(--font-size-sm);
@@ -63,8 +64,20 @@
     &:hover {
       background: rgba(var(--color-accent-rgb), 0.08);
       border-color: rgba(var(--color-accent-rgb), 0.3);
-      transform: translateY(-4px);
+      transform: translateY(-4px) scale(1.05) !important;
     }
+
+    /* Fly-in animations when parent is revealed */
+    .reveal.revealed & {
+      animation-duration: 2s;
+      animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+      animation-fill-mode: forwards;
+    }
+
+    &:nth-child(1) { .reveal.revealed & { animation-name: flyInTopLeft; animation-delay: 0.4s; } }
+    &:nth-child(2) { .reveal.revealed & { animation-name: flyInTopRight; animation-delay: 0.6s; } }
+    &:nth-child(3) { .reveal.revealed & { animation-name: flyInBottomLeft; animation-delay: 0.8s; } }
+    &:nth-child(4) { .reveal.revealed & { animation-name: flyInBottomRight; animation-delay: 1.0s; } }
   }
 
   &__text {
@@ -136,4 +149,25 @@
       gap: var(--spacing-md);
     }
   }
+}
+
+/* --- Diagonal Fly-In Animations --- */
+@keyframes flyInTopLeft {
+  0% { opacity: 0; transform: translate(-60px, -60px); }
+  100% { opacity: 1; transform: translate(0, 0); }
+}
+
+@keyframes flyInTopRight {
+  0% { opacity: 0; transform: translate(60px, -60px); }
+  100% { opacity: 1; transform: translate(0, 0); }
+}
+
+@keyframes flyInBottomLeft {
+  0% { opacity: 0; transform: translate(-60px, 60px); }
+  100% { opacity: 1; transform: translate(0, 0); }
+}
+
+@keyframes flyInBottomRight {
+  0% { opacity: 0; transform: translate(60px, 60px); }
+  100% { opacity: 1; transform: translate(0, 0); }
 }

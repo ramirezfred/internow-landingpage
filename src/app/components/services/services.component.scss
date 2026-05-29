@@ -17,6 +17,22 @@
     display: flex;
     flex-direction: column;
     gap: var(--spacing-lg);
+
+    &.revealed app-service-card {
+      animation-duration: 2s;
+      animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+      animation-fill-mode: forwards;
+
+      &:nth-child(odd) {
+        animation-name: slideInLeftCard;
+        animation-delay: 0.4s;
+      }
+
+      &:nth-child(even) {
+        animation-name: slideInRightCard;
+        animation-delay: 0.7s;
+      }
+    }
   }
 
   &__pillar-tag {
@@ -41,5 +57,19 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: var(--spacing-xl);
+
+    app-service-card {
+      opacity: 0;
+    }
   }
+}
+
+@keyframes slideInLeftCard {
+  0% { opacity: 0; transform: translateX(-100px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRightCard {
+  0% { opacity: 0; transform: translateX(100px); }
+  100% { opacity: 1; transform: translateX(0); }
 }

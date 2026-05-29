@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
+import { Component, ChangeDetectionStrategy, AfterViewInit, ElementRef, ViewChild, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
 import { ServiceCardComponent, SocialLink } from '../service-card/service-card.component';
@@ -10,6 +10,7 @@ import { ServiceCardComponent, SocialLink } from '../service-card/service-card.c
   templateUrl: './services.component.html',
   styleUrl: './services.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class ServicesComponent implements AfterViewInit {
   @ViewChild('servicesSection', { static: true }) servicesSection!: ElementRef<HTMLElement>;
@@ -36,6 +37,11 @@ export class ServicesComponent implements AfterViewInit {
   readonly mezcalLinks: SocialLink[] = [
     { platform: 'Facebook', url: 'https://www.facebook.com/creatumezcal', icon: this.fbIcon },
     { platform: 'Instagram', url: 'https://www.instagram.com/creatumezcal?igsh=dzZ6eHczbnF6N2Fr', icon: this.igIcon }
+  ];
+
+  readonly tequilaLinks: SocialLink[] = [
+    { platform: 'Facebook', url: 'https://www.facebook.com/share/1E3rs564s9/', icon: this.fbIcon },
+    { platform: 'Instagram', url: 'https://www.instagram.com/creatutequila?igsh=MTQ5bnZ3cHNqeXRyNg==', icon: this.igIcon }
   ];
 
   readonly motorsLinks: SocialLink[] = [

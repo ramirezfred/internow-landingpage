@@ -2,42 +2,55 @@
    InterNow — Global Design System (CSS Custom Properties)
    ============================================================ */
 
-/* --- Color Tokens --- */
+/* --- Color Tokens — Paleta 60-30-10 (Logo InterNow) --- */
 :root {
-  /* Primary — Deep Dark Blue */
-  --color-primary: #0D1B2A;
-  --color-primary-rgb: 13, 27, 42;
-  --color-primary-light: #1B263B;
-  --color-primary-dark: #0A0F1E;
+  /* ============================
+     30% — Primary (Navy Blue del Logo)
+     ============================ */
+  --color-primary: #1B1464;
+  --color-primary-rgb: 27, 20, 100;
+  --color-primary-light: #2D2387;
+  --color-primary-dark: #110E45;
 
-  /* Accent — Cyan / Electric Blue */
-  --color-accent: #00D4FF;
-  --color-accent-rgb: 0, 212, 255;
-  --color-accent-light: #0066FF;
-  --color-accent-dark: #0055CC;
+  /* ============================
+     10% — Accent (Naranja del Logo)
+     Solo CTAs, botones y highlights
+     ============================ */
+  --color-accent: #F5A623;
+  --color-accent-rgb: 245, 166, 35;
+  --color-accent-light: #FFB940;
+  --color-accent-dark: #D4880A;
 
-  /* Backgrounds — Premium dark */
-  --color-bg-body: #0A0F1E;
-  --color-bg-section: #0D1B2A;
-  --color-bg-section-alt: #0A0F1E;
-  --color-bg-card: rgba(13, 27, 42, 0.4);
-  --color-bg-card-hover: rgba(0, 212, 255, 0.05);
-  --color-bg-glass: rgba(10, 15, 30, 0.65);
-  --color-bg-input: rgba(255, 255, 255, 0.05);
+  /* ============================
+     60% — Dominante (Blancos / Off-whites)
+     ============================ */
+  --color-bg-body: #FFFFFF;
+  --color-bg-section: #FFFFFF;
+  --color-bg-section-alt: #F7F8FA;
+  --color-bg-card: #FFFFFF;
+  --color-bg-card-hover: #F0F4FF;
+  --color-bg-glass: rgba(255, 255, 255, 0.85);
+  --color-bg-input: #F7F8FA;
 
-  /* Text */
-  --color-text-primary: #FFFFFF;
-  --color-text-secondary: #B0BEC5;
-  --color-text-muted: #78909C;
+  /* Fondos oscuros para secciones de contraste (hero, footer, CTA banner) */
+  --color-bg-dark: #1B1464;
+  --color-bg-dark-alt: #110E45;
 
-  /* Feedback */
-  --color-danger: #FF3366;
-  --color-success: #00FF9D;
-  --color-warning: #FFB300;
+  /* Text — 30% identity (azul navy como texto primario) */
+  --color-text-primary: #1B1464;
+  --color-text-secondary: #4A4A68;
+  --color-text-muted: #8B8BA3;
+  --color-text-on-dark: #FFFFFF;
+  --color-text-on-dark-secondary: rgba(255, 255, 255, 0.75);
 
-  /* Borders */
-  --color-border: rgba(255, 255, 255, 0.05);
-  --color-border-active: rgba(0, 212, 255, 0.4);
+  /* Feedback — Semánticos corporativos */
+  --color-danger: #E53E3E;
+  --color-success: #38A169;
+  --color-warning: #DD6B20;
+
+  /* Borders — Sutiles sobre fondo claro */
+  --color-border: #E2E8F0;
+  --color-border-active: rgba(27, 20, 100, 0.3);
 
   /* Spacing Scale */
   --spacing-xs: 0.25rem;
@@ -70,12 +83,12 @@
   --font-size-4xl: 3.25rem;
   --font-size-5xl: 4.5rem;
 
-  /* Shadows */
-  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.4);
-  --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.5);
-  --shadow-glow-accent: 0 0 30px rgba(0, 212, 255, 0.3);
-  --shadow-glow-primary: 0 0 30px rgba(0, 102, 255, 0.4);
+  /* Shadows — Tintadas con el primario para cohesión */
+  --shadow-sm: 0 2px 8px rgba(27, 20, 100, 0.06);
+  --shadow-md: 0 4px 16px rgba(27, 20, 100, 0.10);
+  --shadow-lg: 0 8px 32px rgba(27, 20, 100, 0.14);
+  --shadow-glow-accent: 0 4px 20px rgba(245, 166, 35, 0.35);
+  --shadow-glow-primary: 0 4px 20px rgba(27, 20, 100, 0.25);
 
   /* Transitions */
   --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -180,13 +193,12 @@ input, select, textarea {
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: var(--color-accent);
+  color: var(--color-primary);
   margin-bottom: var(--spacing-md);
   padding: var(--spacing-xs) var(--spacing-md);
-  border: 1px solid rgba(var(--color-accent-rgb), 0.3);
+  border: 1px solid rgba(var(--color-primary-rgb), 0.15);
   border-radius: var(--radius-full);
-  background: rgba(var(--color-accent-rgb), 0.05);
-  backdrop-filter: blur(4px);
+  background: rgba(var(--color-primary-rgb), 0.05);
 }
 
 .section-title {
@@ -205,7 +217,7 @@ input, select, textarea {
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 50%, #FFFFFF 100%);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 50%, var(--color-accent) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -213,29 +225,28 @@ input, select, textarea {
 
 /* Glassmorphism card */
 .glass-card {
-  background: var(--color-bg-glass);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: var(--color-bg-card);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   transition: all var(--transition-base);
   position: relative;
   overflow: hidden;
+  box-shadow: var(--shadow-sm);
 }
 
 .glass-card::before {
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: linear-gradient(180deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0) 100%);
+  background: linear-gradient(180deg, rgba(var(--color-primary-rgb), 0.02) 0%, rgba(var(--color-primary-rgb), 0) 100%);
   pointer-events: none;
 }
 
 .glass-card:hover {
   background: var(--color-bg-card-hover);
   border-color: var(--color-border-active);
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), var(--shadow-glow-accent);
-  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-6px);
 }
 
 /* Primary button */
@@ -255,12 +266,13 @@ input, select, textarea {
   border: none;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
+  cursor: pointer;
+  box-shadow: var(--shadow-glow-accent);
 }
 
 .btn-primary:hover {
   transform: scale(1.05) translateY(-2px);
-  box-shadow: var(--shadow-glow-accent);
+  box-shadow: 0 6px 28px rgba(var(--color-accent-rgb), 0.5);
   background-position: 100% 50%;
   animation: bgPulse 2s infinite;
 }
@@ -285,7 +297,7 @@ input, select, textarea {
 .reveal {
   opacity: 0;
   transform: translateY(40px);
-  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: opacity 1.5s cubic-bezier(0.16, 1, 0.3, 1), transform 1.5s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: opacity, transform;
 }
 
@@ -300,8 +312,8 @@ input, select, textarea {
 .grid-overlay {
   position: fixed;
   inset: 0;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-                    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-image: linear-gradient(rgba(var(--color-primary-rgb), 0.03) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(var(--color-primary-rgb), 0.03) 1px, transparent 1px);
   background-size: 50px 50px;
   z-index: var(--z-bg);
   pointer-events: none;
@@ -318,28 +330,28 @@ input, select, textarea {
 .blob {
   position: absolute;
   border-radius: 50%;
-  filter: blur(80px);
-  opacity: 0.4;
+  filter: blur(100px);
+  opacity: 0.15;
   animation: floatBlob 10s infinite alternate ease-in-out;
 }
 
 .blob-1 {
   width: 400px; height: 400px;
-  background: var(--color-accent-light);
+  background: rgba(var(--color-primary-rgb), 0.4);
   top: -10%; left: -10%;
   animation-duration: 12s;
 }
 
 .blob-2 {
   width: 500px; height: 500px;
-  background: #6a00ff;
+  background: rgba(var(--color-accent-rgb), 0.3);
   bottom: -20%; right: -10%;
   animation-duration: 15s;
 }
 
 .blob-3 {
   width: 300px; height: 300px;
-  background: var(--color-accent);
+  background: rgba(var(--color-primary-rgb), 0.25);
   top: 40%; left: 50%;
   transform: translate(-50%, -50%);
   animation-duration: 18s;
@@ -352,20 +364,21 @@ input, select, textarea {
 
 /* --- Navbar additions --- */
 .navbar.scrolled {
-  background: rgba(10, 15, 30, 0.8) !important;
+  background: rgba(255, 255, 255, 0.92) !important;
   backdrop-filter: blur(16px) !important;
   -webkit-backdrop-filter: blur(16px) !important;
-  border-bottom: 1px solid rgba(255,255,255,0.05);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
 }
 
 /* --- Scrollbar Styling --- */
 ::-webkit-scrollbar { width: 8px; }
-::-webkit-scrollbar-track { background: var(--color-bg-body); }
+::-webkit-scrollbar-track { background: var(--color-bg-section-alt); }
 ::-webkit-scrollbar-thumb {
-  background: rgba(0, 212, 255, 0.3);
+  background: rgba(var(--color-primary-rgb), 0.2);
   border-radius: var(--radius-full);
 }
-::-webkit-scrollbar-thumb:hover { background: var(--color-accent); }
+::-webkit-scrollbar-thumb:hover { background: rgba(var(--color-primary-rgb), 0.4); }
 
 /* --- Responsive Typography --- */
 @media (max-width: 768px) {

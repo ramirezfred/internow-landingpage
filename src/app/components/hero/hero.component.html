@@ -11,28 +11,30 @@
   </div>
 
   <div class="hero__content container">
-    <div class="hero__text-column">
+    <div class="hero__left-column">
       <h1 class="hero__title">
         <span class="hero__title-line1">{{ 'HERO.TITLE_LINE1' | translate }}</span>
-        <span class="hero__title-line2 gradient-text">{{ 'HERO.TITLE_LINE2' | translate }}</span>
+        <span class="hero__title-line2">{{ 'HERO.TITLE_LINE2' | translate }}</span>
       </h1>
       <p class="hero__subtitle">{{ 'HERO.SUBTITLE' | translate }}</p>
     </div>
 
-    <div class="hero__animation">
-      <dotlottie-wc src="https://lottie.host/86fa15a1-b355-487b-aa0e-d34530606e2f/WBMcK43ZSy.lottie" autoplay
-        loop></dotlottie-wc>
-    </div>
+    <div class="hero__right-column">
+      <div class="hero__animation">
+        <dotlottie-wc src="https://lottie.host/86fa15a1-b355-487b-aa0e-d34530606e2f/WBMcK43ZSy.lottie" autoplay
+          loop></dotlottie-wc>
+      </div>
 
-    <div class="hero__cta-wrapper">
-      <button class="btn-primary hero__cta" id="hero-cta-btn" (click)="scrollToContact()">
-        <span>{{ 'HERO.CTA' | translate }}</span>
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-          stroke-linecap="round" stroke-linejoin="round">
-          <line x1="5" y1="12" x2="19" y2="12"></line>
-          <polyline points="12 5 19 12 12 19"></polyline>
-        </svg>
-      </button>
+      <div class="hero__cta-wrapper">
+        <button class="btn-primary hero__cta" id="hero-cta-btn" (click)="scrollToContact()">
+          <span>{{ 'HERO.CTA' | translate }}</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </button>
+      </div>
     </div>
   </div>
 

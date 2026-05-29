@@ -23,6 +23,22 @@
     }
   }
 
+  &__media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: var(--spacing-sm);
+
+    ::ng-deep dotlottie-wc {
+      width: 100%;
+      max-width: 180px;
+      aspect-ratio: 1/1;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
   &:hover &__icon {
     background: rgba(var(--color-accent-rgb), 0.2);
     transform: scale(1.1);
@@ -38,14 +54,78 @@
     font-size: var(--font-size-sm);
     color: var(--color-text-secondary);
     line-height: 1.7;
-    flex-grow: 1;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 6;
-    -webkit-box-orient: vertical;
   }
 
+  // --- Expandable "See More" section ---
+  &__more-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  &__more-content {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+    &--expanded {
+      grid-template-rows: 1fr;
+    }
+  }
+
+  &__more-text {
+    overflow: hidden;
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    line-height: 1.7;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease 0s;
+
+    .service-card__more-content--expanded & {
+      opacity: 1;
+      transition: opacity 0.3s ease 0.15s;
+      padding-bottom: var(--spacing-sm);
+    }
+  }
+
+  &__toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    align-self: flex-start;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: var(--spacing-xs) 0;
+    color: var(--color-accent);
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: color var(--transition-fast);
+
+    &:hover {
+      color: var(--color-primary);
+    }
+
+    &--expanded .service-card__chevron {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__toggle-label {
+    text-transform: uppercase;
+  }
+
+  &__chevron {
+    width: 18px;
+    height: 18px;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    flex-shrink: 0;
+  }
+
+  // --- Social links ---
   &__social {
     display: flex;
     gap: var(--spacing-sm);

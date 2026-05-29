@@ -1,7 +1,7 @@
 .footer {
-  background: var(--color-bg-section-alt);
+  background: var(--color-bg-dark);
   padding-top: var(--spacing-4xl);
-  border-top: 1px solid var(--color-border);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
   position: relative;
   overflow: hidden;
 
@@ -42,14 +42,14 @@
 
   &__desc {
     font-size: var(--font-size-sm);
-    color: var(--color-text-secondary);
+    color: var(--color-text-on-dark-secondary);
     line-height: 1.7;
   }
 
   &__title {
     font-size: var(--font-size-lg);
     font-weight: 600;
-    color: var(--color-text-primary);
+    color: var(--color-text-on-dark);
     margin-bottom: var(--spacing-lg);
   }
 
@@ -60,7 +60,7 @@
     gap: var(--spacing-md);
 
     li a {
-      color: var(--color-text-secondary);
+      color: var(--color-text-on-dark-secondary);
       font-size: var(--font-size-sm);
       transition: color var(--transition-fast);
       cursor: pointer;
@@ -83,7 +83,7 @@
       font-size: var(--font-size-xs);
       text-transform: uppercase;
       letter-spacing: 1px;
-      color: var(--color-text-muted);
+      color: rgba(255, 255, 255, 0.5);
       margin-bottom: var(--spacing-xs);
     }
   }
@@ -100,7 +100,7 @@
       height: 36px;
       border-radius: var(--radius-sm);
       background: rgba(255, 255, 255, 0.05);
-      color: var(--color-text-secondary);
+      color: var(--color-text-on-dark-secondary);
       transition: all var(--transition-fast);
 
       &:hover {
@@ -121,7 +121,7 @@
       display: flex;
       align-items: center;
       gap: var(--spacing-sm);
-      color: var(--color-text-secondary);
+      color: var(--color-text-on-dark-secondary);
       font-size: var(--font-size-sm);
 
       svg {
@@ -133,12 +133,12 @@
   /* Bottom Bar */
   &__bottom {
     padding-block: var(--spacing-lg);
-    border-top: 1px solid var(--color-border);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
     text-align: center;
 
     p {
       font-size: var(--font-size-xs);
-      color: var(--color-text-muted);
+      color: rgba(255, 255, 255, 0.5);
     }
   }
 }
